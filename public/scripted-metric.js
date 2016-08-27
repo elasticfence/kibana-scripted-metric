@@ -1,7 +1,10 @@
 define(function (require) {
-  return function AggTypeMetricScriptedMetricProvider(Private) {
+
+  function AggTypeMetricScriptedMetricProvider(Private) {
     var _ = require('lodash');
 
+	// KBN 5
+    	// var MetricAggType = Private(require('ui/agg_types/metrics/metric_agg_type'));
     var MetricAggType = Private(require('ui/agg_types/metrics/MetricAggType'));
     var fieldFormats = Private(require('ui/registry/field_formats'));
 
@@ -42,4 +45,6 @@ define(function (require) {
       ]
     });
   };
+
+  return AggTypeMetricScriptedMetricProvider;
 });

@@ -1,7 +1,7 @@
 {
   "name": "kibana-scripted-metric",
   "version": "0.0.1",
-  "description": "kibana plugin for scripted metrics",
+  "description": "kibana plugin for scripted metric editing",
   "main": "index.js",
   "scripts": {
     "lint": "eslint",
