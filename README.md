@@ -21,7 +21,7 @@ cd kibana-scripted-metric && npm install && npm run build
 
 ##### Uninstall
 ```bash
-/opt/kibana/bin/kibana plugin --remove fieldformatter-bits
+/opt/kibana/bin/kibana plugin --remove kibana-scripted-metric
 ```
 
 Credits
