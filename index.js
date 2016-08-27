@@ -3,7 +3,7 @@ module.exports = function (kibana) {
     id: 'kibana-scripted-metric',
     name: 'kibana-scripted-metric',
     uiExports: {
-      aggTypes: ['plugins/kibana-scripted-metric/scripted-metric']
+      docViews: ['plugins/kibana-scripted-metric/scripted-metric']
     }
   });
 };
