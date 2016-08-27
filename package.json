@@ -1,5 +1,5 @@
 {
-  "name": "kibana_scripted_metric",
+  "name": "kibana-scripted-metric",
   "version": "0.0.1",
   "description": "kibana plugin for scripted metrics",
   "main": "index.js",

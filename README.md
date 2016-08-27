@@ -3,6 +3,13 @@ kibana-scripted-metric
 
 kibana plugin to add scripted metrics (experimental)
 
+
+Status
+------
+
+* Unstable - Don't use this yet!
+
+
 Installation
 ------------
 ##### Install
