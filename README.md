@@ -16,7 +16,7 @@ Installation
 ```bash
 git clone https://github.com/lmangani/kibana-scripted-metric
 cd kibana-scripted-metric && npm install && npm run build
-/opt/kibana/bin/kibana plugin --install kibana-scripted-metric -u file://`pwd`/build/kibana_scripted_metric-0.0.1.zip
+/opt/kibana/bin/kibana plugin --install kibana-scripted-metric -u file://`pwd`/build/kibana-scripted-metric-0.0.1.zip
 ```
 
 ##### Uninstall
