@@ -37,10 +37,6 @@ define(function (require) {
           name: 'reduce_script',
           editor: stringEditor,
           default: ''
-        }, {
-          name: 'kibana_display_name',
-          editor: stringEditor,
-          default: 'Scripted Metric'
         }
       ]
     });
