@@ -19,14 +19,14 @@ tar cvfz /opt/kibana/src/ui-backup.tgz -C /opt/kibana/src/ui .
 
 ##### Install Patch
 ```bash
-curl -O https://github.com/lmangani/kibana-scripted-metric/files/441307/kibana-scripted-metric-4.5.0.tar.gz
+curl -O https://github.com/elasticfence/kibana-scripted-metric/files/441369/kibana-scripted-metric-4.5.0.tar.gz
 tar zxvf ./kibana-scripted-metric-4.5.0.tar.gz -C /opt/kibana/src/ui/
 rm -rf /opt/kibana/optimize/bundles
 ```
 
 ##### Build & Install Patch
 ```bash
-cd /usr/src && git clone https://github.com/lmangani/kibana-scripted-metric
+cd /usr/src && git clone https://github.com/elasticfence/kibana-scripted-metric
 cd kibana-scripted-metric && npm install && npm run package
 tar zxvf ./kibana-scripted-metric-4.5.0.tar.gz -C /opt/kibana/src/ui/
 rm -rf /opt/kibana/optimize/bundles
