@@ -1,7 +1,7 @@
 kibana-scripted-metric
 =================================
 
-Kibana 4.5 plugin/patch to add scripted metric aggregation type
+Kibana 5.0 plugin/patch to add scripted metric aggregation type
 
 
 Status
