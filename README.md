@@ -1,9 +1,25 @@
 kibana-scripted-metric
 =================================
 
-Kibana 5.0 plugin/patch to add scripted metric aggregation type
+Kibana 5.0 plugin/patch to add support for [Scripted Metric Aggregation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-metrics-scripted-metric-aggregation.html)
 
-
+```json
+{
+    "query" : {
+        "match_all" : {}
+    },
+    "aggs": {
+        "profit": {
+            "scripted_metric": {
+                "init_script" : "_agg['transactions'] = []",
+                "map_script" : "if (doc['type'].value == \"sale\") { _agg.transactions.add(doc['amount'].value) } else { _agg.transactions.add(-1 * doc['amount'].value) }", 
+                "combine_script" : "profit = 0; for (t in _agg.transactions) { profit += t }; return profit",
+                "reduce_script" : "profit = 0; for (a in _aggs) { profit += a }; return profit"
+            }
+        }
+    }
+}
+```
 Status
 ------
 
