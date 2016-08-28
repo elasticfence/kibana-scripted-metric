@@ -1,33 +1,43 @@
 kibana-scripted-metric
 =================================
 
-kibana plugin to add scripted metrics (experimental)
+Kibana 4.5 plugin/patch to add scripted metric aggregation type
 
 
 Status
 ------
 
-* Unstable - Don't use this yet!
+* Experimental and Brutal - Use at your OWN risk!
 
 
 Installation
 ------------
-##### Install
-```bash
-git clone https://github.com/lmangani/kibana-scripted-metric
-cd kibana-scripted-metric && npm install && npm run build
-/opt/kibana/bin/kibana plugin --install kibana-scripted-metric -u file://`pwd`/build/kibana-scripted-metric-0.0.1.zip
+#### Backup First!
+```
+tar cvfz /opt/kibana/src/ui-backup.tgz -C /opt/kibana/src/ui .
 ```
 
-##### Uninstall
+##### Install Patch
 ```bash
-/opt/kibana/bin/kibana plugin --remove kibana-scripted-metric
+cd /usr/src && git clone https://github.com/lmangani/kibana-scripted-metric
+cd kibana-scripted-metric && npm install && npm run package
+tar zxvf ./kibana-scripted-metric-latest.tar.gz -C /opt/kibana/src/ui/
+```
+```
+rm -rf /opt/kibana/optimize/bundles
 ```
 
-Credits
+##### Remove / Restore
+```bash
+tar zxvf /opt/kibana/src/ui-backup.tgz -C /opt/kibana/src/ui
+```
+```
+rm -rf /opt/kibana/optimize/bundles
+```
+
+Credit
 -------
-Based on discussion and code related to this thread: https://github.com/elastic/kibana/issues/2646 
-and patches from https://github.com/fabiangebert/kibana
+Based on discussion and code related to this thread: https://github.com/elastic/kibana/issues/2646 and patches from https://github.com/fabiangebert/kibana
 
 License
 -------
