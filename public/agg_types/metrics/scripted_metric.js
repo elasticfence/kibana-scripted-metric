@@ -1,14 +1,14 @@
-define(function (require) {
+import _ from 'lodash';
+import AggTypesMetricsMetricAggTypeProvider from 'ui/agg_types/metrics/metric_agg_type';
+import RegistryFieldFormatsProvider from 'ui/registry/field_formats';
+import StringEditorProvider from 'ui/agg_types/controls/string.html';
 
-  return function AggTypeMetricScriptedMetricProvider(Private) {
-    var _ = require('lodash');
-
+export default function AggTypeMetricScriptedMetricProvider(Private) {
+  
     // KBN 5
-    // var MetricAggType = Private(require('ui/agg_types/metrics/metric_agg_type'));
-
-    var MetricAggType = Private(require('ui/agg_types/metrics/MetricAggType'));
-    var fieldFormats = Private(require('ui/registry/field_formats'));
-    var stringEditor = require('ui/agg_types/controls/string.html');
+    let MetricAggType = Private(AggTypesMetricsMetricAggTypeProvider);
+    let fieldFormats = Private(RegistryFieldFormatsProvider);
+    let stringEditor = Private(StringEditorProvider);
 
     return new MetricAggType({
       name: 'scripted_metric',
@@ -44,5 +44,4 @@ define(function (require) {
         }
       ]
     });
-  };
-});
+};
